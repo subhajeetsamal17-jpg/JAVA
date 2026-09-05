@@ -2,8 +2,22 @@ import java.util.*;
 
 class Q5
 {
-    int GCD(int a, int b)
+    public static void main(String args[])
     {
+        if(args.length != 2)
+        {
+            System.out.println("Error: Please enter exactly two integer numbers.");
+            return;
+        }
+
+        Scanner sc1 = new Scanner(args[0]);
+        Scanner sc2 = new Scanner(args[1]);
+
+        int num1 = sc1.nextInt();
+        int num2 = sc2.nextInt();
+
+        int a = num1;
+        int b = num2;
         int iterations = 0;
 
         while(b != 0)
@@ -14,27 +28,9 @@ class Q5
             iterations++;
         }
 
-        System.out.println("Number of iterations: " + iterations);
-        return a;
-    }
-
-    public static void main(String args[])
-    {
-        if(args.length != 2)
-        {
-            System.out.println("Error: Please provide exactly two integer arguments.");
-            return;
-        }
-
-        int a = Integer.parseInt(args[0]);
-        int b = Integer.parseInt(args[1]);
-
-        Q5 obj = new Q5();
-
-        int gcd = obj.GCD(a, b);
-
-        System.out.println("First number: " + a);
-        System.out.println("Second number: " + b);
-        System.out.println("GCD: " + gcd);
+        System.out.println("First number = " + num1);
+        System.out.println("Second number = " + num2);
+        System.out.println("GCD = " + a);
+        System.out.println("Number of iterations = " + iterations);
     }
 }
