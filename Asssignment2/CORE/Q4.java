@@ -6,17 +6,20 @@ class Q4
     {
         if(args.length != 2)
         {
-            System.out.println("Error: Please enter exactly two numbers as command-line arguments.");
+            System.out.println("Error: Please enter exactly two numbers.");
             return;
         }
 
-        int a = Integer.parseInt(args[0]);
-        int b = Integer.parseInt(args[1]);
+        Scanner sc1 = new Scanner(args[0]);
+        Scanner sc2 = new Scanner(args[1]);
 
-        int sum = a + b;
+        int num1 = sc1.nextInt();
+        int num2 = sc2.nextInt();
 
-        System.out.println("First number: " + a);
-        System.out.println("Second number: " + b);
-        System.out.println("Sum: " + sum);
+        int sum = num1 + num2;
+
+        System.out.println("First number = " + num1);
+        System.out.println("Second number = " + num2);
+        System.out.println("Sum = " + sum);
     }
 }
