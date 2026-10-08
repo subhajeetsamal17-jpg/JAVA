@@ -51,15 +51,14 @@ class PostgraduateStudent extends Student {
 
    
     char calculateGrade() {
-
-        if (marks >= )
-            return 'O';
-        else if (marks >= 75)
-            return 'B';
-        else if (marks >= 65)
-            return 'C';
-        else if (marks >= 55)
-            return 'D';
+        if (marks >= 85)
+            return 'O'
+        else if (marks >= 75&&marks<85)
+            return 'E'
+        else if (marks >= 65&&marks<75)
+            return 'A'
+        else if (marks >= 55&&marks<65)
+            return 'B'
         else
             return 'F';
     }
